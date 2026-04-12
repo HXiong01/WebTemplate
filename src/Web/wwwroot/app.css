@@ -1,0 +1,143 @@
+:root {
+    --bg: #f3efe6;
+    --surface: rgba(255, 255, 255, 0.78);
+    --ink: #13212f;
+    --accent: #0f766e;
+    --accent-strong: #0b4f4a;
+    --line: rgba(19, 33, 47, 0.12);
+    --shadow: 0 24px 60px rgba(19, 33, 47, 0.12);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: var(--ink);
+    background:
+        radial-gradient(circle at top left, rgba(15, 118, 110, 0.15), transparent 32%),
+        linear-gradient(135deg, #f7f3ea 0%, #e8f1ef 100%);
+}
+
+.shell {
+    width: min(1080px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 48px 0 64px;
+}
+
+.hero {
+    padding: 40px;
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    background: var(--surface);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow);
+}
+
+.eyebrow {
+    margin: 0 0 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--accent-strong);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+h1, h2 {
+    margin: 0 0 12px;
+}
+
+.lead {
+    max-width: 720px;
+    margin: 0 0 28px;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.panel {
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.74);
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+input,
+button {
+    font: inherit;
+}
+
+input {
+    flex: 1 1 240px;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #fff;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 14px;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--accent-strong);
+}
+
+.message {
+    min-height: 24px;
+    margin: 16px 0 0;
+    font-weight: 600;
+}
+
+dl {
+    margin: 0;
+}
+
+dl div {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+dl div:last-child {
+    border-bottom: 0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+    .shell {
+        width: min(100% - 20px, 1080px);
+        padding-top: 20px;
+    }
+
+    .hero,
+    .panel {
+        padding: 20px;
+    }
+}

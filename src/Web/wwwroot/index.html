@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WebTemplate</title>
+    <link rel="stylesheet" href="/app.css" />
+</head>
+<body>
+    <main class="shell">
+        <section class="hero">
+            <p class="eyebrow">Web starter</p>
+            <h1>WebTemplate</h1>
+            <p class="lead">
+                Minimal starter modeled after the reference app structure: separate web and API projects,
+                file logging, launch scripts, and independent test harness coverage.
+            </p>
+            <form id="greeting-form" class="panel">
+                <label for="name">Name</label>
+                <div class="row">
+                    <input id="name" name="name" type="text" placeholder="Developer" />
+                    <button type="submit">Call API</button>
+                </div>
+                <p id="message" class="message">Waiting for request.</p>
+            </form>
+        </section>
+
+        <section class="grid">
+            <article class="panel">
+                <h2>What is included</h2>
+                <ul>
+                    <li>Launch scripts for `Api`, `Web`, or `Full`.</li>
+                    <li>Shared rolling file logger under `storage/logs`.</li>
+                    <li>A console test harness for independent verification.</li>
+                </ul>
+            </article>
+            <article class="panel">
+                <h2>Status</h2>
+                <dl id="status">
+                    <div><dt>Web</dt><dd id="web-status">Checking...</dd></div>
+                    <div><dt>API</dt><dd id="api-status">Checking...</dd></div>
+                </dl>
+            </article>
+        </section>
+    </main>
+
+    <script src="/config.js"></script>
+    <script src="/app.js"></script>
+</body>
+</html>

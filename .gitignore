@@ -1,0 +1,9 @@
+bin/
+obj/
+.vs/
+.vscode/
+.dotnet_home/
+storage/logs/
+storage/artifacts/
+src/Api/storage/
+src/Web/storage/
